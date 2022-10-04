@@ -1,0 +1,227 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    list-style-type: none;
+    text-decoration: none;
+    color: #000;
+}
+header{
+    background: linear-gradient(#259c95 20%, #7bc5c1);
+    height: 100%;
+}
+.logo{
+    margin: 15px;
+    a{
+        img{
+            transition: transform .2s;
+        }
+        img:hover{
+            transform: scale(1.15);
+        }
+    }
+}
+.nav{
+    text-align: right;
+    margin: 40px;
+    ul{
+        li{
+            transition: transform .3s;
+        }
+        li:hover{
+            transform: translate(0, -3px);
+        }
+    }
+}
+ul{
+    li{
+        margin: 5px;
+        padding: 5px;
+        background-color: #e1c7a5;
+        display: inline-block;
+    }
+}
+.bg-main{
+    background-image: url(../img/pasto.jpg);
+}
+h1{
+    padding: 15px;
+    background-color: #7bc5c1;
+    text-align: center;
+    border: solid 3px #cfc5c1;
+    border-right: solid 3px #cfc5c1;
+	border-left: solid 3px #cfc5c1;
+	border-bottom: solid 3px #cfc5c1;
+}
+.p-main{
+    padding: 5px;
+    color: #000;
+    line-height: 1.5;
+    background-color: #e1c7a5;
+    text-align: justify;
+	font-size: 25px;
+}
+.logoF{
+	/*background-color: #7bc5c1;*/
+	text-align: center;
+}
+.locaF{
+	/*background-color: #7bc5c1;*/
+	text-align: center;
+}
+.copyF{
+	/*background-color: #7bc5c1;*/
+	text-align: center;
+}
+.gridBody{
+    display: flex;
+    flex-direction: column;
+}
+.gridH{
+    box-shadow: 2px 7px 7px 1px rgba(0,0,0,0.49);
+	-webkit-box-shadow: 2px 7px 7px 1px rgba(0,0,0,0.49);
+	-moz-box-shadow: 2px 7px 7px 1px rgba(0,0,0,0.49);
+	z-index: 1; 
+}
+.gridsHeader{
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: auto;
+	grid-template-areas:
+	"logo nav";
+}
+.gridLogo{
+	grid-area: logo;
+}
+.gridNav{
+	grid-area: nav;
+}
+.mainIndex{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.contentMain{
+	display: inline-flex;
+}
+.gridImg{
+	min-width: 35vw;
+	max-width: 40%;
+	margin: 10px;
+}
+.gridP{
+	padding: 15px;
+	margin: 10px;
+}
+.gridF{
+	z-index: 1;
+	box-shadow: 2px 7px 7px 0px rgba(0,0,0,0.42) inset;
+	-webkit-box-shadow: 2px 7px 7px 0px rgba(0,0,0,0.42) inset;
+	-moz-box-shadow: 2px 7px 7px 0px rgba(0,0,0,0.42) inset;
+}
+.gridsFoot{
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(#7bc5c1, #eab875);
+	min-height: 100%;
+	justify-content: space-evenly;
+}
+.gridLogoF{
+	padding: 5px;
+}
+.gridLocacion{
+	padding: 9px;
+}
+.gridCopy{
+	padding: 9px;
+}
+
+@import "nosotros.scss";
+@import "productos.scss";
+@import "contacto.scss";
+@import "corporativo.scss";
+
+@media only screen and (max-width: 768px){
+
+	/*GRID HEADER*/
+	.gridsHeader{
+		display: grid;
+		grid-template-columns: 20% 80%;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"logo nav";
+
+	}
+
+	.gridLogo{
+		grid-area: logo;
+	}
+
+	.gridNav{
+		grid-area: nav;
+		display: flex;
+		flex-wrap: wrap-reverse;
+	}
+
+	/*GRID MAIN*/
+
+	.contentMain{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contentMain img{
+		min-width: 95%;
+	}
+
+	/*MAIN NOSOTROS*/
+
+	.gridsMainNos{
+		background-image: url(../img/pasto.jpg);
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto auto;
+		grid-template-areas:
+		"titleN"
+		"imgN "
+		"h2N"
+		"loremN"
+		"igN";
+	}
+
+	.gridTitleNos{
+		text-align: center;
+		grid-area: titleN;
+	}
+	.gridImgNos{
+		width: 95%;
+		margin: 10px;
+		grid-area: imgN;
+	}
+	.gridH2Nos{
+		margin: 5px;
+		padding: 5px;
+		grid-area: h2N;
+		background-color: #eab875;
+	}
+	.gridLoremNos{
+		margin: 5px;
+		padding: 5px;
+		grid-area: loremN;
+		background-color: #eab875;
+	}
+	.gridIgNos{
+		text-align: center;
+		grid-area: igN;
+	}
+
+	iframe{
+		max-width: 75vw;
+		margin: 0px;
+		padding: 0px;
+		width: auto;
+		height: auto;
+	}
+}

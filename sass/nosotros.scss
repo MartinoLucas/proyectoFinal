@@ -1,0 +1,40 @@
+.mainNos{
+    min-height: 100vh;
+    background-image: url(../img/pasto.jpg);
+}
+.gridMainNos{
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "titleN titleN"
+    "imgN h2N"
+    "imgN loremN"
+    "igN igN";
+}
+.gridTitleNos{
+	text-align: center;
+	grid-area: titleN;
+}
+.gridImgNos{
+	margin: 10px;
+	grid-area: imgN;
+}
+.gridH2Nos{
+	margin: 5px;
+	padding: 5px;
+	grid-area: h2N;
+	background-color: #eab875;
+}
+.gridLoremNos{
+	font-size: 20px;
+	margin: 5px;
+	padding: 5px;
+	grid-area: loremN;
+	background-color: #eab875;
+}
+.gridIgNos{
+	text-align: center;
+	grid-area: igN;
+}
